@@ -16,6 +16,7 @@
 // 1: AP (default mode as a brand new product)
 // 2: STA
 // 3: AP+STA (default mode after first wifi connection succeed)
+// {"T":407,"mode":3,"ap_ssid":"SUSAN","ap_password":"!ROVER12","sta_ssid":"sweeneyville","sta_password":"thetruthisout"}
 byte WIFI_MODE_ON_BOOT = 1;
 const char* sta_ssid = "sweeneyville";
 const char* sta_password = "thetruthisout";
@@ -93,7 +94,7 @@ bool loadWifiConfig() {
 		wifiConfigYaml.close();
 		wifiConfigFound = true;
 		jsonInfoHttp.clear();
-  	jsonInfoHttp["ip"] = "/wifiConfig.json load succeed.";
+  		jsonInfoHttp["ip"] = "/wifiConfig.json load succeed.";
  		jsonInfoHttp["wifi_mode_on_boot"] = WIFI_MODE_ON_BOOT;
  		jsonInfoHttp["sta_ssid"] = sta_ssid;
  		jsonInfoHttp["sta_password"] = sta_password;

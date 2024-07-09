@@ -2,7 +2,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UGV01_BASE_WEB</title>
+    <title>SUSAN_BASE_WEB</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
     <style type="text/css">
@@ -251,7 +251,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     <main>
         <section>
             <div>
-                <h2 class="h2-tt" id="deviceInfo">SUSAN</h2>
+                <h2 class="h2-tt" id="deviceInfo">SUSAN CONTROL</h2>
             </div>
             <div class="for-move">
                 <div class="for-move-a">
