@@ -14,10 +14,11 @@ void movtionPinInit(){
   pinMode(BIN2, OUTPUT);
   pinMode(PWMB, OUTPUT);
 
-  ledcAttach(PWMA, freq, ANALOG_WRITE_BITS);
-  ledcAttachChannel(PWMA, freq, ANALOG_WRITE_BITS, channel_A);
-  ledcAttach(PWMB, freq, ANALOG_WRITE_BITS);
-  ledcAttachChannel(PWMB, freq, ANALOG_WRITE_BITS, channel_B);
+  ledcSetup(channel_A, freq, ANALOG_WRITE_BITS);
+  ledcAttachPin(PWMA, channel_A);
+
+  ledcSetup(channel_B, freq, ANALOG_WRITE_BITS);
+  ledcAttachPin(PWMB, channel_B);
 
   digitalWrite(AIN1, LOW);
   digitalWrite(AIN2, LOW);

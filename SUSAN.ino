@@ -61,21 +61,13 @@ StaticJsonDocument<512> jsonInfoHttp;
 #include "wifi_ctrl.h"
 
 // functions for esp-now.
-// #include "esp_now_ctrl.h"
+#include "esp_now_ctrl.h"
 
 // functions for uart json ctrl.
 #include "uart_ctrl.h"
 
 // functions for http & web server.
 #include "http_server.h"
-
-uint8_t thisDevMac[6];
-String macToString(uint8_t mac[6]) {
-  char macStr[18]; // 6 pairs of 2 characters + null terminator
-  snprintf(macStr, sizeof(macStr), "%02X:%02X:%02X:%02X:%02X:%02X",
-           mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
-  return String(macStr);
-}
 
 void moduleType_RoArmM2() {
   unsigned long curr_time = millis();
@@ -126,7 +118,7 @@ void setup() {
     screenLine_0 = "UGV";
   }
 
-  screenLine_1 = "version: 0.90";
+  screenLine_1 = "version: 0.91";
   screenLine_2 = "Starting...";
   screenLine_3 = "";
   oled_update();
@@ -216,7 +208,7 @@ void setup() {
   oled_update();
   if(InfoPrint == 1){Serial.println("SUSAN started.");}
 
-  // getThisDevMacAddress();
+  getThisDevMacAddress();
 
   updateOledWifiInfo();
 
