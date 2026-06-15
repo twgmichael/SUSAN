@@ -1,2 +1,7 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize all text files to LF in the repo and on checkout (LF only).
+* text=auto eol=lf
+
+# Compiled build artifacts are binary — never normalize or diff.
+*.bin binary
+*.elf binary
+*.map binary

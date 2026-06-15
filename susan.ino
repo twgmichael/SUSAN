@@ -78,7 +78,7 @@ void moduleType_RoArmM2() {
 
   RoArmM2_getPosByServoFeedback();
 
-  // esp-now flow ctrl as a flow-leader.
+  // esp-now flow ctrl as a flow-leader!
   // switch(espNowMode) {
   // case 1: espNowGroupDevsFlowCtrl();break;
   // case 2: espNowSingleDevFlowCtrl();break;
